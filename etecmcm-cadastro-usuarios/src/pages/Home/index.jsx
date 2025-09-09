@@ -1,21 +1,21 @@
 import './style.css'
 import Lixeira from '../../assets/lixeira.png'
+import api from '../../services/api'
+import { useEffect  } from 'react'
 
 function Home() {
-  const usuarios = [
-    {
-      id: 'jhfdjhjsdhfjh',
-      nome: 'Teste',
-      idade: 30,
-      email: 'teste@email.com'
-    },
-    {
-      id: '1374878ehhwe',
-      nome: 'Aline',
-      idade: 28,
-      email: 'aline@email.com'
-    }
-  ]
+  
+  let usuarios = []
+
+  async function getUsuarios(){
+    usuarios = await api.get('/cadastro')
+    console.log(usuarios)
+  }
+
+  useEffect(()=>{
+    getUsuarios()
+  },[])
+
 
   return (
     <div className='container'>
