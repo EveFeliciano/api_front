@@ -1,66 +1,111 @@
 /* CSS da página inicial do aplicativo de cadastro de usuários */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #ffb6c1, #ffcce7, #fff0f5);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
 .container {
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding-top: 100px;
+  padding-top: 80px;
 }
 
 h1 {
-  color: #fff;
-  font-size: 32px;
+  color: #ff69b4;
+  font-size: 36px;
+  font-family: 'Story Script', cursive;
+  text-shadow: 2px 2px #fff0f5;
+  margin-bottom: 20px;
 }
 
 form {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 20px;
   padding: 30px;
-  border-radius: 10px;
-  background-color: #2E2d4e;
-  max-width: 50%;
-  width: 400px;
+  border-radius: 20px;
+  background-color: #ffe4ef;
+  max-width: 400px;
+  width: 100%;
   margin-bottom: 20px;
+  box-shadow: 0px 4px 12px rgba(255, 182, 193, 0.6);
+  border: 2px solid #ffb6c1;
+}
 
-  & button {
-    border-radius: 30px;
-    background-color: #8b8ae1;
-    height: 40px;
-    border: none;
-    font-weight: bold;
-    cursor: pointer;
-  }
+form button {
+  border-radius: 30px;
+  background-color: #ff69b4;
+  height: 45px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+  font-size: 16px;
+  transition: 0.3s;
+}
 
-  & input {
-  border: 1px solid #48456c;
+form button:hover {
+  background-color: #ff85c1;
+  transform: scale(1.05);
+}
+
+form input {
+  border: 1px solid #ff99cc;
   border-radius: 30px;
   height: 40px;
-  background-color: #363653;
-  color: #fff;
+  background-color: #fff0f5;
+  color: #ff1493;
   font-size: 16px;
-  padding-left: 10px;
+  padding-left: 15px;
   outline: none;
+  transition: 0.3s;
 }
+
+form input:focus {
+  border-color: #ff69b4;
+  box-shadow: 0 0 5px #ffb6c1;
+}
+
+/* Cartão de usuário */
 .card {
   display: flex;
   justify-content: space-between;
-  background-color: #2E2d4e;
+  align-items: center;
+  background-color: #ffe4ef;
   margin: 10px;
-  padding: 10px;
+  padding: 15px 20px;
   width: 400px;
-  border-radius: 10px;
-}
-  & p {
-    color: #fff;
-    font-weight: bold;
-  }
-& span {
-  font-weight: normal;
+  border-radius: 15px;
+  border: 2px solid #ffb6c1;
+  box-shadow: 0px 4px 12px rgba(255, 182, 193, 0.6);
 }
 
-& button {
+.card p {
+  color: #ff1493;
+  font-weight: bold;
+}
+
+.card span {
+  font-weight: normal;
+  color: #c71585;
+}
+
+.card button {
   background-color: transparent;
   border: none;
   cursor: pointer;
+  color: #ff69b4;
+  font-size: 18px;
+  transition: 0.3s;
 }
+
+.card button:hover {
+  color: #ff1493;
+  transform: scale(1.2);
 }
