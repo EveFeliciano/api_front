@@ -6,7 +6,7 @@
 }
 
 h1 {
-  color: aliceblue;
+  color: palevioletred;
   font-size: 32px;
   text-align: center;
 }
@@ -17,16 +17,18 @@ form {
   gap: 30px;
   padding: 30px;
   border-radius: 30px;
-  background-color: palevioletred;
+  background-color: #ffe4ef;
+  border: 2px solid #ffb6c1;
   max-width: 50%;
   width: 400px;
   margin-bottom: 20px;
+  box-shadow: 0px 4px 12px rgba(255, 182, 193, 0.6);
 }
 
 form button {
   border-radius: 30px;
-  background-color: rgb(243, 64, 94);
-  color: #ffb6c1;
+  background-color: #f8697f;
+  color: #ffffff;
   height: 40px;
   border: none;
   font-weight: bold;
@@ -41,7 +43,7 @@ form input {
   border: 1px solid rgb(184, 46, 92);
   border-radius: 30px;
   height: 40px;
-  background-color: rgb(255, 148, 184);
+  background-color: #ffb6c1;
   color: aliceblue;
   font-size: 16px;
   padding-left: 10px;
@@ -59,6 +61,7 @@ form input {
   border-radius: 15px;
   border: 2px solid #ffb6c1;
   box-shadow: 0px 4px 12px rgba(255, 182, 193, 0.6);
+  position: relative; 
 }
 
 .card p {
@@ -66,14 +69,24 @@ form input {
   font-weight: bold;
 }
 
-.delete-btn {
-  background-color: palevioletred;
+.card button {
   border: none;
-  cursor: pointer;
+  border-radius: 15px;
+  color: #ffffff;
+  height: 40px;
+  width: 40px;
   padding: 5px;
+  cursor: pointer;
+  margin-bottom: 10px; 
 }
 
-.delete-btn img {
-  width: 30px;
-  height: 30px;
+.card button:hover {
+  opacity: 0.8;
+}
+
+#botoes {
+  display: flex;
+  flex-direction: column;  /* Coloca os botões em uma coluna */
+  justify-content: center;
+  align-items: center;
 }

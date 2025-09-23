@@ -1,5 +1,6 @@
 import './style.css'
 import Lixeira from '../../assets/lixeira.png'
+import Lapis from '../../assets/lapis.png'
 import api from '../../services/api'
 import { useEffect, useState, useRef } from 'react'
 
@@ -28,7 +29,7 @@ function Home() {
 
   async function deleteUsuarios(id) {
     await api.delete(`/cadastro/${id}`) 
-    getUsuarios()   // 👈 agora atualiza a lista
+    getUsuarios() 
   }
 
   async function updateUsuario(id) {
@@ -81,10 +82,16 @@ function Home() {
             <p>Idade: {usuario.idade}</p>
             <p>Email: {usuario.email}</p>
           </div>
-          <button onClick={()=> deleteUsuarios(usuario.id)}>
-            <img src={Lixeira} alt="Deletar" style={{ width: '40px', height: '40px' }} />
-          </button>
-          <button onClick={() => editar(usuario)}>Editar</button>
+
+          <div id='botoes'>
+            <button onClick={()=> deleteUsuarios(usuario.id)}>
+              <img src={Lixeira} alt="Deletar" style={{ width: '40px', height: '40px' }} />
+            </button>
+            <button onClick={() => editar(usuario)}>
+            <img src={Lapis} alt="Editar" style={{ width: '40px', height: '40px' }} />
+            </button>
+          </div>
+
         </div>
       ))}
     </div>
